@@ -1,0 +1,25 @@
+resource "aws_instance" "this" {
+    ami = var.ami_id
+    instance_type = var.instance_type
+    vpc_security_group_ids = var.sg_id
+    tags = var.tags
+}
+
+resource "aws_security_group" "allow_all" {
+    name = var.sg_name
+    description = var.sg_desc
+
+    ingress {
+        from_port = var.from_port
+        to_port = var.to_port
+        protocol = "-1"
+        cidr_blocks = var.cidr_blocks
+    }
+    egress {
+        from_port = var.from_port
+        to_port = var.to_port
+        protocol = "-1"
+        cidr_blocks = var.cidr_blocks
+    }
+    tags = var.sg_tags
+}
