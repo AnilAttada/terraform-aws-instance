@@ -3,7 +3,7 @@ output "sg_ids" {
 }
 
 output "instance_id" {
-    value = aws_instance.this.instance_id
+    value = aws_instance.this.id
 }
 
 output "public_ip" {
