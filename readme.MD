@@ -1,4 +1,4 @@
-# AWS EC2 INSTANCE
+# AWS EC2 INSTANCE AND SECURITY GROUP
 You can create ec2 instance and security group in joindevops using this module
 
 ## Inputs
